@@ -26,8 +26,8 @@ function UserCard(props) {
       >
         <CardImg top src={avatar_url} />
         <CardTitle>{login}</CardTitle>
-        <CardSubtitle>{ public_repos ? `Repos: ${public_repos}` : ""}</CardSubtitle>
-        <CardSubtitle>{ followers ? `Followers: ${followers}` : ""}</CardSubtitle>
+        <CardSubtitle>Repos: {public_repos ? public_repos : "NA"}</CardSubtitle>
+        <CardSubtitle>Followers: {followers ? followers : "NA"}</CardSubtitle>
         <CardText>{bio}</CardText>
         <a className="btn btn-secondary" href={html_url}>Visit Profile</a>
       </Card>
