@@ -1,15 +1,23 @@
 import React from 'react';
 import {
-  Card, CardText,
+  Card, CardImg, CardText,
   CardTitle, CardSubtitle,
 } from 'reactstrap';
 
 function UserCard(props) {
-  const { login, bio, public_repos, followers, } = props.userData;
+  const { avatar_url, login, bio, public_repos, followers, } = props.userData;
 
   return(
     <div>
-      <Card>
+      <Card
+        style={{
+          padding: "1rem",
+          margin: "5%",
+          backgroundColor: "#191970",
+          color: "white",
+        }}
+      >
+        <CardImg top src={avatar_url} />
         <CardTitle>{login}</CardTitle>
         <CardSubtitle>Repos: {public_repos}</CardSubtitle>
         <CardSubtitle>Followers: {followers}</CardSubtitle>

@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import CardList from './components/CardList';
-import UserCard from './components/UserCard';
 
 class App extends React.Component {
 
@@ -31,8 +30,7 @@ class App extends React.Component {
   render() {
     return(
     <div className="App">
-      <UserCard userData={this.state.userData}/>
-      <CardList users={this.state.followersData}/>
+      <CardList users={this.state.followersData} userData={this.state.userData}/>
     </div>
     );
   }
