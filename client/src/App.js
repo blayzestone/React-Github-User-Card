@@ -11,19 +11,18 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // axios.get("https://api.github.com/users/blayzestone")
-      // .then(res => {
-      //   this.setState({ userData: res.data });
-      // })
-      // .catch(err => console.log(err));
-      // axios.get('https://api.github.com/users/blayzestone/followers')
-      //   .then(res => {
-      //     localStorage.setItem("followersData", JSON.stringify(res.data));
-      //   })
-      //   .catch(err => console.log(err));
+    axios.get("https://api.github.com/users/blayzestone")
+      .then(res => {
+        this.setState({ userData: res.data });
+      })
+      .catch(err => console.log(err));
+
+      axios.get('https://api.github.com/users/blayzestone/followers')
+        .then(res => {
+          this.setState({ followersData: res.data })
+        })
+        .catch(err => console.log(err));
     this.setState({
-      userData: JSON.parse(localStorage.getItem("userData")),
-      followersData: JSON.parse(localStorage.getItem("followersData")),
     });
   }
 
