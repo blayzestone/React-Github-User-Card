@@ -5,12 +5,12 @@ import {
 } from 'reactstrap';
 
 function UserCard(props) {
-  const { name, bio, public_repos, followers, } = props.userData;
+  const { login, bio, public_repos, followers, } = props.userData;
 
   return(
     <div>
       <Card>
-        <CardTitle>{name}</CardTitle>
+        <CardTitle>{login}</CardTitle>
         <CardSubtitle>Repos: {public_repos}</CardSubtitle>
         <CardSubtitle>Followers: {followers}</CardSubtitle>
         <CardText>{bio}</CardText>
